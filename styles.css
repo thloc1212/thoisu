@@ -1098,6 +1098,67 @@ main#deck-container {
   }
 }
 
+/* Compact header controls on phones so the fixed bar never overflows. */
+@media (max-width: 640px) {
+  .deck-header {
+    height: 56px;
+    gap: 8px;
+    padding-left: max(10px, env(safe-area-inset-left));
+    padding-right: max(10px, env(safe-area-inset-right));
+  }
+
+  .deck-brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 0;
+  }
+
+  .deck-logo-img,
+  .deck-brand-meta,
+  .slide-counter-badge {
+    display: none;
+  }
+
+  .deck-brand-title {
+    display: block;
+    overflow: hidden;
+    font-size: 0.82rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .deck-controls {
+    flex: 0 0 auto;
+    gap: 6px;
+  }
+
+  .deck-btn {
+    width: 36px;
+    padding: 0;
+  }
+
+  .deck-btn span {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .deck-header {
+    gap: 6px;
+    padding-left: max(8px, env(safe-area-inset-left));
+    padding-right: max(8px, env(safe-area-inset-right));
+  }
+
+  .deck-controls {
+    gap: 4px;
+  }
+
+  .deck-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
+
 /* 15. Accessibility & Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   html {

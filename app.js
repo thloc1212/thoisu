@@ -342,11 +342,6 @@ import newsImage9 from './data/9.jpg?url';
     section.dataset.slideIndex = String(item.stt);
     section.dataset.slideLabel = `${item.paddedStt}. ${item.title.slice(0, 30)}...`;
 
-    // Apply specific art-direction themes based on story archetype
-    if (item.stt === 2) {
-      section.classList.add('theme-dark');
-    }
-
     const wrap = document.createElement('div');
     wrap.className = 'slide-content-wrap';
 
