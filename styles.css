@@ -809,14 +809,6 @@ main#deck-container {
   margin-bottom: 24px;
 }
 
-.closing-disclaimer {
-  max-width: 55ch;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--c-text-muted);
-  margin-bottom: 36px;
-}
-
 /* 11. DETAIL DRAWER / MODAL */
 .detail-overlay {
   position: fixed;
