@@ -5,12 +5,23 @@
  * Pure Vanilla JavaScript - Fully Static, Accessible & Responsive
  */
 
+import newsCsvUrl from './data/news.csv?url';
+import newsImage1 from './data/1.png?url';
+import newsImage2 from './data/2.png?url';
+import newsImage3 from './data/3.png?url';
+import newsImage4 from './data/4.jpg?url';
+import newsImage5 from './data/5.jpg?url';
+import newsImage6 from './data/6.jpg?url';
+import newsImage7 from './data/7.png?url';
+import newsImage8 from './data/8.jpg?url';
+import newsImage9 from './data/9.jpg?url';
+
 (function () {
   'use strict';
 
   // --- Configuration ---
   const CONFIG = {
-    csvUrl: './data/news.csv',
+    csvUrl: newsCsvUrl,
     fallbackCsvUrl: 'data/news.csv',
     imagesDir: './assets/images/',
     placeholdersDir: './assets/placeholders/',
@@ -177,15 +188,15 @@
 
   // Mapping of real news images in data/ (supports both png and jpg)
   const REAL_NEWS_IMAGES = {
-    1: 'data/1.png',
-    2: 'data/2.png',
-    3: 'data/3.png',
-    4: 'data/4.jpg',
-    5: 'data/5.jpg',
-    6: 'data/6.jpg',
-    7: 'data/7.png',
-    8: 'data/8.jpg',
-    9: 'data/9.jpg'
+    1: newsImage1,
+    2: newsImage2,
+    3: newsImage3,
+    4: newsImage4,
+    5: newsImage5,
+    6: newsImage6,
+    7: newsImage7,
+    8: newsImage8,
+    9: newsImage9
   };
 
   /**

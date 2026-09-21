@@ -118,20 +118,20 @@ Chỉ cần đặt file ảnh vào thư mục `assets/images/` theo đúng quy �
 
 ---
 
-## 🌐 Triển khai lên GitHub Pages & Vercel
+## 🌐 Triển khai lên Vercel
 
-Dự án được cấu hình hoàn toàn với **đường dẫn tương đối (`./assets/...`, `./data/...`)**, đảm bảo hoạt động hoàn hảo cả ở thư mục gốc và thư mục con.
+Dự án đã có `vercel.json`, dùng Node.js 22 và được cấu hình để Vercel chạy `npm ci`, `npm run build`, sau đó phát hành thư mục `dist`. Website là trang tĩnh nên **không cần khai báo biến môi trường**.
 
-### Triển khai GitHub Pages
-1. Đẩy mã nguồn lên repository GitHub của bạn (ví dụ: `https://github.com/<username>/<repo-name>`).
-2. Vào tab **Settings** của repository trên GitHub.
-3. Chọn mục **Pages** ở thanh bên trái.
-4. Tại mục **Build and deployment > Source**, chọn **Deploy from a branch**.
-5. Chọn nhánh `main` (hoặc `master`), thư mục `/ (root)` và nhấn **Save**.
-6. GitHub Pages sẽ kích hoạt đường dẫn `https://<username>.github.io/<repo-name>/` với giao diện hoạt động đầy đủ.
+1. Đẩy toàn bộ mã nguồn (bao gồm `package-lock.json`) lên GitHub.
+2. Truy cập [vercel.com](https://vercel.com), đăng nhập và chọn **Add New → Project**.
+3. Import repository vừa đẩy lên. Vercel sẽ nhận diện **Framework Preset: Vite** từ cấu hình có sẵn.
+4. Giữ **Root Directory** là `./`; không thêm Environment Variables.
+5. Nhấn **Deploy**.
 
-### Triển khai Vercel
-1. Truy cập [vercel.com](https://vercel.com) và đăng nhập bằng GitHub.
-2. Chọn **Add New Project** ➔ Chọn repository chứa dự án này.
-3. Để nguyên thiết lập mặc định (Framework Preset: *Other*, Root Directory: `./`).
-4. Nhấn **Deploy**. Trang web sẽ được phát hành ngay lập tức.
+Mỗi lần bạn cập nhật nhánh được Vercel theo dõi, website sẽ tự động build và phát hành lại. Có thể kiểm tra bản production ngay trên máy bằng:
+
+```bash
+npm ci
+npm run build
+npm run preview
+```
