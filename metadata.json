@@ -1,0 +1,7 @@
+{
+  "name": "Điểm Tin Tuần 3 - Tháng 9/2026",
+  "description": "Interactive editorial presentation điểm tin tuần 14/09/2026 — 20/09/2026 định dạng digital magazine/slide deck.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

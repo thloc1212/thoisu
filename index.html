@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điểm Tin Tuần 3 - Tháng 9/2026</title>
+    <meta name="description" content="Interactive editorial presentation điểm tin tuần 14/09/2026 — 20/09/2026 định dạng digital magazine/slide deck." />
+    <meta property="og:title" content="Điểm Tin Tuần 3 - Tháng 9/2026" />
+    <meta property="og:description" content="Interactive editorial presentation điểm tin tuần 14/09/2026 — 20/09/2026 định dạng digital magazine/slide deck." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts fallbacks for exquisite Vietnamese typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Top Reading Progress Bar -->
+    <div id="reading-progress" aria-hidden="true"></div>
+
+    <!-- Presentation Global Deck Bar -->
+    <header class="deck-header" role="banner">
+      <a href="#slide-cover" class="deck-brand" aria-label="Về trang bìa điểm tin">
+        <img
+          src="./assets/images/logo.png"
+          onerror="this.src='./assets/placeholders/logo-placeholder.svg'"
+          alt="Biểu trưng Điểm Tin Tuần"
+          class="deck-logo-img"
+        />
+        <div>
+          <span class="deck-brand-title">ĐIỂM TIN TUẦN</span>
+          <span class="deck-brand-meta">TUẦN 3 • 09/2026</span>
+        </div>
+      </a>
+
+      <div class="deck-controls">
+        <span id="slide-counter-badge" class="slide-counter-badge" aria-live="polite">MỞ ĐẦU</span>
+        <button id="btn-open-toc" class="deck-btn" type="button" aria-haspopup="dialog" aria-label="Mở mục lục bản tin">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <span>Mục lục</span>
+        </button>
+        <button id="btn-deck-prev" class="deck-btn deck-btn-icon" type="button" aria-label="Tin trước">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+        <button id="btn-deck-next" class="deck-btn deck-btn-icon" type="button" aria-label="Tin tiếp theo">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Floating Navigation Dots for Desktop -->
+    <nav id="floating-deck-nav" class="floating-deck-nav" aria-label="Danh sách slide"></nav>
+
+    <!-- Main Deck Presentation Container -->
+    <main id="deck-container" role="main">
+      <!-- 00. OPENING / COVER SLIDE -->
+      <section id="slide-cover" class="editorial-slide cover-slide" data-slide-index="0" data-slide-label="Bìa: Điểm Tin Tuần 3">
+        <div class="slide-content-wrap">
+          <div class="cover-grid">
+            <div class="cover-col-text">
+              <div class="cover-title-eyebrow">BẢN TIN BIÊN TẬP ĐẶC BIỆT</div>
+              <h1 class="cover-main-heading">
+                ĐIỂM TIN TUẦN
+              </h1>
+              <div class="cover-subheading">
+                ĐIỂM TIN TUẦN THỨ 3 • THÁNG 9/2026
+              </div>
+              <div>
+                <span class="cover-date-pill">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span>14/09/2026 — 20/09/2026</span>
+                </span>
+              </div>
+              <p class="cover-summary-lead">
+                Tổng hợp các sự kiện trọng tâm tuần qua trên các lĩnh vực chính sách phát triển, quy hoạch đô thị, khoa học công nghệ, thể thao châu lục và thời sự quốc tế dưới định dạng biên tập trực quan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-content-wrap cover-cue-bottom">
+          <span>9 tin nổi bật trong tuần</span>
+        </div>
+      </section>
+
+      <!-- Dynamic news slides (01 to 10) will be injected here safely by app.js from data/news.csv -->
+
+      <!-- 99. CLOSING / END SLIDE -->
+      <section id="slide-closing" class="editorial-slide closing-slide" data-slide-index="99" data-slide-label="Kết thúc">
+        <div class="closing-crest" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <h2 class="closing-heading">ĐIỂM TIN TUẦN THỨ 3 • THÁNG 9/2026</h2>
+        <div class="closing-period">14/09/2026 — 20/09/2026</div>
+        <p class="closing-disclaimer">
+          Nội dung tổng hợp từ các nguồn được dẫn trong từng bài.
+        </p>
+        <div>
+          <button id="btn-back-to-top" class="btn-primary" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span>Trở về đầu trang</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Detail Slide-Over Drawer / Modal -->
+    <div id="detail-overlay" class="detail-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="detail-title">
+      <div class="detail-panel">
+        <div class="detail-header">
+          <div class="detail-header-meta">
+            <span id="detail-tag" class="editorial-tag">NỘI DUNG CHI TIẾT</span>
+          </div>
+          <button id="detail-close" class="detail-close-btn" type="button" aria-label="Đóng bảng chi tiết (ESC)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="detail-body">
+          <h3 id="detail-title" class="detail-title"></h3>
+          <div id="detail-text" class="detail-text-content"></div>
+        </div>
+
+        <div class="detail-footer">
+          <span style="font-size: 0.8rem; color: var(--c-text-muted);">Nguồn chính thức:</span>
+          <a id="detail-source" href="#" target="_blank" rel="noopener noreferrer" class="btn-source-out">
+            <span>Đọc bài gốc</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table of Contents Modal -->
+    <div id="toc-overlay" class="toc-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="toc-heading">
+      <div class="toc-card">
+        <div class="toc-header">
+          <h3 id="toc-heading" style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--c-crimson);">
+            MỤC LỤC BẢN TIN TUẦN
+          </h3>
+          <button id="toc-close" class="detail-close-btn" type="button" aria-label="Đóng mục lục (ESC)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <ul id="toc-list" class="toc-list">
+          <!-- Populated by app.js -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Application Script -->
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+
+

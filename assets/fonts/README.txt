@@ -1,0 +1,1 @@
+Đặt file heading-font.woff2 và body-font.woff2 tại thư mục này để ghi đè font chữ tùy chỉnh.
